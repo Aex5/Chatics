@@ -66,7 +66,8 @@ export default function Account({ session }) {
 
   return (
     <div className="form-widget">
-      <Avatar
+      <h1 className="bg-slate-200">welcome glad to see you, {username}</h1>
+      {/* <Avatar
         uid={user.id}
         url={avatar_url}
         size={150}
@@ -107,7 +108,7 @@ export default function Account({ session }) {
         >
           {loading ? "Loading ..." : "Update"}
         </button>
-      </div>
+      </div> */}
 
       <div>
         <button
