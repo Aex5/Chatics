@@ -14,7 +14,7 @@ const Home = () => {
     if (!session) {
       router.push("/signIn");
     }
-  }, [session]);
+  }, []);
 
   return (
     <div className="container" style={{ padding: "50px 0 100px 0" }}>
