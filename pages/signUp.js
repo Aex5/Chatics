@@ -16,7 +16,7 @@ export default function SignUp() {
   }
 
   return (
-    <div>
+    <div className="w-full ">
       <h1>signUP</h1>
       email:
       <input
