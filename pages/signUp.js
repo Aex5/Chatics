@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import Link from "next/link";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -16,24 +17,35 @@ export default function SignUp() {
   }
 
   return (
-    <div className="w-full ">
-      <h1>signUP</h1>
-      email:
-      <input
-        type="email"
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
-      />
-      <br /> Password:
-      <input
-        type="password"
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Enter your Password"
-      />
-      <br />
-      {viewEmail ? <h1>check your email</h1> : <h1> </h1>}
-      <button onClick={signUpHandler}>signUp</button>
-      <br />
-    </div>
+    <main className="w-full text-[#eff1f0] mt-10">
+      <div className="max-w-[800px] mx-auto">
+        <div className="w-96 mx-auto flex flex-col gap-4 ">
+          <div className="text-2xl text-slate-300 font-semibold tracking-wide">
+            <h1>Connect with your friends.</h1>
+            <p className="text-indigo-600">Fast and Fun.</p>
+          </div>
+          <input
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+            className="py-2 px-2 rounded-md bg-slate-700"
+          />
+          <input
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter your Password"
+            className="py-2 px-2 rounded-md bg-slate-700"
+          />
+          <div className="w-full h-10 flex justify-between gap-3">
+            <button
+              onClick={signUpHandler}
+              className="w-full bg-gradient-to-br from-fuchsia-700 via-indigo-600 to-indigo-600 hover:border-[1px] border-slate-500 rounded-md "
+            >
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }

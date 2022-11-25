@@ -51,7 +51,7 @@ export default function SignIn() {
             </button>
 
             <button className="w-full bg-slate-700 rounded-md border-2 border-slate-600 hover:bg-slate-600">
-              Create Account
+              <Link href="/signUp">Create Account</Link>
             </button>
           </div>
         </div>
